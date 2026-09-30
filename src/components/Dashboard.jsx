@@ -13,6 +13,7 @@ import ExpensesPanel from './dashboard/ExpensesPanel';
 import SettingsPanel from './dashboard/SettingsPanel';
 import DashboardPanel from './dashboard/DashboardPanel';
 import PricingPanel from './dashboard/PricingPanel';
+import IndicadoresPanel from './IndicadoresEstatísticos/IndicadoresPanel';
 import { useBarcodeScanner } from '../hooks/useBarcodeScanner';
 import { demoApi } from '../demo/demoApi';
 import { printReceipt } from '../utils/printReceipt';
@@ -678,6 +679,13 @@ export default function Dashboard({ setUser, demo, onExitDemo }) {
               formatCurrency={formatCurrency}
               onUpdate={handleUpdateProduct}
               showToast={showToast}
+            />
+          )}
+
+          {activeTab === 'indicadores' && (
+            <IndicadoresPanel
+              userId={userId}
+              demo={isDemo}
             />
           )}
 

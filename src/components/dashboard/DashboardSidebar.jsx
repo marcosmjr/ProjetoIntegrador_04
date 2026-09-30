@@ -29,6 +29,12 @@ export default function DashboardSidebar({
               <span>Dashboard</span>
             </a>
           </li>
+          <li className="nav-item">
+            <a href="#" className={`nav-link ${activeTab === 'indicadores' ? 'active' : ''}`} onClick={(e)=>{e.preventDefault(); onChange('indicadores'); onMobileClick();}}>
+              <span className="nav-icon"><i className="fas fa-chart-pie"></i></span>
+              <span>Indicadores Estatísticos</span>
+            </a>
+          </li>
           <li className="nav-section">Estoque</li>
           <li className="nav-item">
             <a href="#" className={`nav-link ${activeTab === 'produtos' ? 'active' : ''}`} onClick={(e)=>{e.preventDefault(); onChange('produtos'); onMobileClick();}}>
